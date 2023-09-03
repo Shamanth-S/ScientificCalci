@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ScientificCalculator {
     static Scanner in = new Scanner(System.in);
     public static void main(String[] args) throws InterruptedException {
-        int choice;
+        int ch;
         do {
             System.out.println("Scientific Calculator");
             System.out.println("Choose an operation:");
@@ -16,11 +16,11 @@ public class ScientificCalculator {
             System.out.println("7. Cosine");
             System.out.println("8. Tangent");
             System.out.println("9. Exponential");
-            choice = in.nextInt();
+            ch = in.nextInt();
 
             double res = 0.0;
 
-            switch (choice) {
+            switch (ch) {
                             case 1: res = add();
                                     break;
                             case 2: res = sub();
@@ -39,14 +39,14 @@ public class ScientificCalculator {
                                     break;
                             case 9: res = e();
                                     break;
-                            default: System.out.println("Invalid choice.");
+                            default: System.out.println("Invalid ch.");
                                      return;
             }
 
             System.out.println("Result: " + res);
             System.out.println();
             Thread.sleep(50000);
-            } while (choice != 10);
+            } while (ch != 10);
             in.close();
     }
 
